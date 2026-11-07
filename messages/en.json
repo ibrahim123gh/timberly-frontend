@@ -31,6 +31,47 @@
     "wishlist": "Your wishlist is empty.",
     "orders": "Enter an order number to look up an order."
   },
+  "product": {
+    "categories": {
+      "living-room": "Living Room",
+      "bedroom": "Bedroom",
+      "dining": "Dining Room",
+      "kitchen": "Kitchen & Bespoke Mills",
+      "tables": "Tables & Desks"
+    },
+    "color": "Color",
+    "frameMaterial": "Frame Material",
+    "timberSpecies": "Timber Species",
+    "joinery": "Joinery & Construction",
+    "leadTime": "Lead Time",
+    "dimensions": "Dimensions",
+    "width": "Width",
+    "height": "Height",
+    "depth": "Depth",
+    "sku": "SKU",
+    "quantity": "Quantity",
+    "decrease": "Decrease quantity",
+    "increase": "Increase quantity",
+    "inStock": "In Stock",
+    "madeToOrder": "Made to Order",
+    "addToCart": "Add to Cart",
+    "saveToWishlist": "Save to wishlist",
+    "removeFromWishlist": "Remove from wishlist",
+    "addedToCart": "Added {quantity} × {name} to your cart",
+    "addedToWishlist": "Added {name} to your wishlist",
+    "removedFromWishlist": "Removed {name} from your wishlist",
+    "descriptionTab": "Description",
+    "specificationsTab": "Specifications",
+    "detailsConstruction": "Construction Details",
+    "careShipping": "Care & Shipping",
+    "trust": {
+      "delivery": "Free white-glove delivery",
+      "trial": "30-day in-home trial",
+      "warranty": "10-year warranty"
+    },
+    "relatedEyebrow": "Continue the Collection",
+    "relatedTitle": "You May Also Like"
+  },
   "footer": {
     "brand": "Timberly",
     "description": "Thoughtful furniture and timeless pieces, chosen to make your home feel like yours.",

@@ -5,8 +5,3 @@ export function ProductsPage() {
   const t = useTranslations();
   return <EmptyState title={t("pages.products")} description={t("empty.products")} />;
 }
-
-export function ProductDetailsPage() {
-  const t = useTranslations();
-  return <EmptyState title={t("pages.productDetails")} description={t("empty.product")} />;
-}

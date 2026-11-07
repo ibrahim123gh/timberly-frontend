@@ -1,5 +1,6 @@
-import { ProductDetailsPage } from "@/features/products/products-page";
+import { ProductDetailsPage } from "@/features/products/product-details-page";
 
-export default function Page() {
-  return <ProductDetailsPage />;
+export default async function Page(props: PageProps<"/[locale]/products/[slug]">) {
+  const { slug } = await props.params;
+  return <ProductDetailsPage slug={slug} />;
 }

@@ -22,7 +22,7 @@ type ProductCardProps = {
   onQuickAdd?: (product: Product) => void;
 };
 
-const badges = {
+export const productBadges = {
   bestseller: {
     label: "Bestseller",
     backgroundClassName: "bg-brand-sand",
@@ -47,7 +47,7 @@ export function ProductCard({
   onToggleWishlist,
   onQuickAdd,
 }: ProductCardProps) {
-  const badge = product.badge ? badges[product.badge] : null;
+  const badge = product.badge ? productBadges[product.badge] : null;
 
   const price = new Intl.NumberFormat(
     locale === "ar" ? "ar-LB" : "en-US",

@@ -4,6 +4,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Playfair_Display, Plus_Jakarta_Sans, Tajawal } from "next/font/google";
 import { routing } from "@/i18n/routing";
+import { Toaster } from "@/components/ui/sonner";
 import "../globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -49,7 +50,10 @@ export default async function LocaleLayout({
       className={`${plusJakartaSans.variable} ${playfairDisplay.variable} ${tajawal.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col">
-        <NextIntlClientProvider messages={messages}>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+          <Toaster position={locale === "ar" ? "top-left" : "top-right"} />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -31,6 +31,47 @@
     "wishlist": "قائمة المفضلة فارغة.",
     "orders": "أدخل رقم الطلب للبحث عنه."
   },
+  "product": {
+    "categories": {
+      "living-room": "غرفة المعيشة",
+      "bedroom": "غرفة النوم",
+      "dining": "غرفة الطعام",
+      "kitchen": "المطبخ والنجارة الخاصة",
+      "tables": "الطاولات والمكاتب"
+    },
+    "color": "اللون",
+    "frameMaterial": "خامة الهيكل",
+    "timberSpecies": "نوع الخشب",
+    "joinery": "التجميع والنجارة",
+    "leadTime": "مدة التسليم",
+    "dimensions": "الأبعاد",
+    "width": "العرض",
+    "height": "الارتفاع",
+    "depth": "العمق",
+    "sku": "رمز المنتج",
+    "quantity": "الكمية",
+    "decrease": "إنقاص الكمية",
+    "increase": "زيادة الكمية",
+    "inStock": "متوفر",
+    "madeToOrder": "يُصنع عند الطلب",
+    "addToCart": "أضف إلى السلة",
+    "saveToWishlist": "أضف إلى المفضلة",
+    "removeFromWishlist": "إزالة من المفضلة",
+    "addedToCart": "تمت إضافة {quantity} × {name} إلى سلتك",
+    "addedToWishlist": "تمت إضافة {name} إلى المفضلة",
+    "removedFromWishlist": "تمت إزالة {name} من المفضلة",
+    "descriptionTab": "الوصف",
+    "specificationsTab": "المواصفات",
+    "detailsConstruction": "تفاصيل التجميع",
+    "careShipping": "العناية والشحن",
+    "trust": {
+      "delivery": "توصيل مجاني بخدمة كاملة",
+      "trial": "تجربة منزلية لمدة 30 يوماً",
+      "warranty": "ضمان لمدة 10 سنوات"
+    },
+    "relatedEyebrow": "تابع المجموعة",
+    "relatedTitle": "قد يعجبك أيضاً"
+  },
   "footer": {
     "brand": "تيمبرلي",
     "description": "أثاث مختار بعناية وقطع خالدة لتجعل منزلك أقرب إلى ذوقك وشخصيتك.",
