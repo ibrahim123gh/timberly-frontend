@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Heart, Search, ShoppingBag, UserRound } from "lucide-react";
@@ -16,8 +19,35 @@ export function MainHeader({
   cartCount = 0,
   wishlistCount = 0,
 }: MainHeaderProps) {
+  const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    let previousScrollY = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 0) {
+        setHidden(false);
+      } else if (currentScrollY > previousScrollY) {
+        setHidden(true);
+      } else if (currentScrollY < previousScrollY) {
+        setHidden(false);
+      }
+
+      previousScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="border-b border-outline-warm bg-surface-white">
+    <div
+      className={`sticky top-0 z-50 border-b border-outline-warm bg-surface-white transition-transform duration-200 ${
+        hidden ? "-translate-y-full" : "translate-y-0"
+      }`}
+    >
       <div className="page-gutter flex h-18 flex-wrap items-center justify-between gap-x-5 gap-y-3 py-3 lg:flex-nowrap">
         <Link
           href={`/${locale}`}
