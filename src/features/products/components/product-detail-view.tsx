@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
 
+import { useCartStore } from "@/features/cart/store/cart-store";
+import { getCartItemId } from "@/features/cart/types/cart";
 import { ProductGallery } from "./product-gallery";
 import { ProductBuyBox } from "./product-buy-box";
 import { ProductTabs } from "./product-tabs";
@@ -21,6 +23,7 @@ export function ProductDetailView({
   locale,
 }: ProductDetailViewProps) {
   const t = useTranslations("product");
+  const addItem = useCartStore((state) => state.addItem);
   const [isWishlisted, setIsWishlisted] = useState(false);
   const [quantity, setQuantity] = useState(1);
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
@@ -39,6 +42,19 @@ export function ProductDetailView({
   };
 
   const handleAddToCart = () => {
+    const selectedColor = product.colors[selectedColorIndex] ?? product.colors[0];
+    addItem({
+      id: getCartItemId(product.id, selectedColor.name, selectedMaterial),
+      productId: product.id,
+      slug: product.slug,
+      name: product.name,
+      image: images[0] ?? product.image,
+      price: product.price,
+      currency: product.currency,
+      color: selectedColor.name,
+      material: selectedMaterial,
+      quantity,
+    });
     toast.success(t("addedToCart", { quantity, name: product.name }));
   };
 

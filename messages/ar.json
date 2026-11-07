@@ -72,6 +72,27 @@
     "relatedEyebrow": "تابع المجموعة",
     "relatedTitle": "قد يعجبك أيضاً"
   },
+  "cart": {
+    "each": "للقطعة",
+    "remove": "إزالة",
+    "itemCount": "{count, plural, one {# قطعة} other {# قطع}}",
+    "continueShopping": "متابعة التسوق",
+    "secureCheckout": "دفع آمن ومشفر",
+    "orderSummary": "ملخص الطلب",
+    "subtotal": "المجموع الفرعي",
+    "delivery": "التوصيل",
+    "free": "مجاني",
+    "calculatedAtCheckout": "يُحتسب عند الدفع",
+    "taxNote": "تُحتسب الضرائب عند الدفع.",
+    "promoCode": "رمز الخصم",
+    "promoCodePlaceholder": "أدخل الرمز",
+    "apply": "تطبيق",
+    "promoUnavailable": "رموز الخصم غير متوفرة بعد.",
+    "freeDeliveryUnlocked": "لقد حصلت على توصيل مجاني بخدمة كاملة",
+    "freeDeliveryProgress": "أضف {amount} للحصول على توصيل مجاني بخدمة كاملة",
+    "grandTotal": "الإجمالي",
+    "checkout": "المتابعة إلى الدفع"
+  },
   "footer": {
     "brand": "تيمبرلي",
     "description": "أثاث مختار بعناية وقطع خالدة لتجعل منزلك أقرب إلى ذوقك وشخصيتك.",

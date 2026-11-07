@@ -7,18 +7,18 @@ import { Heart, Search, ShoppingBag, UserRound } from "lucide-react";
 import {
   Font12WhiteMedium,
 } from "@/components/shared/typography";
+import { useCartCount } from "@/features/cart/store/cart-store";
 
 type MainHeaderProps = {
   locale?: "en" | "ar";
-  cartCount?: number;
   wishlistCount?: number;
 };
 
 export function MainHeader({
   locale = "en",
-  cartCount = 0,
   wishlistCount = 0,
 }: MainHeaderProps) {
+  const cartCount = useCartCount();
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {

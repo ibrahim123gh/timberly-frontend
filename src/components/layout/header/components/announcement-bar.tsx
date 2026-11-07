@@ -21,9 +21,9 @@ export function AnnouncementBar() {
   return (
     <div className="border-b border-outline-warm bg-palette-ece7df">
       <div className="page-gutter flex min-h-8 items-center justify-between gap-4">
-        <p className="flex items-center gap-2 text-[9px] tracking-wide text-ink-secondary">
-          <span className="size-1.5 rounded-full bg-brand-sand" />
-          <span>
+        <p className="flex min-w-0 items-center gap-2 text-[9px] tracking-wide text-ink-secondary">
+          <span className="size-1.5 shrink-0 rounded-full bg-brand-sand" />
+          <span className="min-w-0 truncate">
             <Font12GrayMedium>
               WORLDWIDE BESPOKE WHITE-GLOVE DELIVERY COMPLIMENTARY OVER $5,000
             </Font12GrayMedium>

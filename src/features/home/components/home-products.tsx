@@ -1,8 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
+import { toast } from "sonner";
 
 import { cn } from "@/lib/utils";
+import { useCartStore } from "@/features/cart/store/cart-store";
+import { getCartItemId } from "@/features/cart/types/cart";
 import { ProductCard } from "@/features/products/components/product-card";
 import type {
   Product,
@@ -36,6 +40,33 @@ export function HomeProducts({
   onQuickAdd,
 }: HomeProductsProps) {
   const [activeFilter, setActiveFilter] = useState<Filter>("all");
+  const t = useTranslations("product");
+  const addItem = useCartStore((state) => state.addItem);
+
+  const handleQuickAdd = (product: Product) => {
+    if (onQuickAdd) {
+      onQuickAdd(product);
+      return;
+    }
+
+    const color = product.colors[0];
+    const material = product.materialOptions[0];
+
+    addItem({
+      id: getCartItemId(product.id, color.name, material),
+      productId: product.id,
+      slug: product.slug,
+      name: product.name,
+      image: product.image,
+      price: product.price,
+      currency: product.currency,
+      color: color.name,
+      material,
+      quantity: 1,
+    });
+
+    toast.success(t("addedToCart", { quantity: 1, name: product.name }));
+  };
 
   const filteredProducts =
     activeFilter === "all"
@@ -105,7 +136,7 @@ export function HomeProducts({
                 locale={locale}
                 isWishlisted={wishlistIds.includes(product.id)}
                 onToggleWishlist={onToggleWishlist}
-                onQuickAdd={onQuickAdd}
+                onQuickAdd={handleQuickAdd}
               />
             ))}
           </div>

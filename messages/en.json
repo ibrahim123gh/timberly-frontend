@@ -72,6 +72,27 @@
     "relatedEyebrow": "Continue the Collection",
     "relatedTitle": "You May Also Like"
   },
+  "cart": {
+    "each": "each",
+    "remove": "Remove",
+    "itemCount": "{count, plural, one {# item} other {# items}}",
+    "continueShopping": "Continue Shopping",
+    "secureCheckout": "Secure, encrypted checkout",
+    "orderSummary": "Order Summary",
+    "subtotal": "Subtotal",
+    "delivery": "Delivery",
+    "free": "Free",
+    "calculatedAtCheckout": "Calculated at checkout",
+    "taxNote": "Taxes calculated at checkout.",
+    "promoCode": "Promo code",
+    "promoCodePlaceholder": "Enter code",
+    "apply": "Apply",
+    "promoUnavailable": "Promo codes aren't available yet.",
+    "freeDeliveryUnlocked": "You've unlocked free white-glove delivery",
+    "freeDeliveryProgress": "Add {amount} more for free white-glove delivery",
+    "grandTotal": "Total",
+    "checkout": "Proceed to Checkout"
+  },
   "footer": {
     "brand": "Timberly",
     "description": "Thoughtful furniture and timeless pieces, chosen to make your home feel like yours.",
