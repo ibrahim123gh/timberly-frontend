@@ -7,6 +7,7 @@ import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { useCartStore } from "@/features/cart/store/cart-store";
 import { getCartItemId } from "@/features/cart/types/cart";
+import { useWishlistStore } from "@/features/wishlist/store/wishlist-store";
 import { ProductCard } from "@/features/products/components/product-card";
 import type {
   Product,
@@ -42,6 +43,23 @@ export function HomeProducts({
   const [activeFilter, setActiveFilter] = useState<Filter>("all");
   const t = useTranslations("product");
   const addItem = useCartStore((state) => state.addItem);
+  const wishlistIdsFromStore = useWishlistStore((state) => state.productIds);
+  const toggleWishlistItem = useWishlistStore((state) => state.toggle);
+
+  const handleToggleWishlist = (product: Product) => {
+    if (onToggleWishlist) {
+      onToggleWishlist(product);
+      return;
+    }
+
+    const next = !wishlistIdsFromStore.includes(product.id);
+    toggleWishlistItem(product.id);
+    toast.success(
+      t(next ? "addedToWishlist" : "removedFromWishlist", {
+        name: product.name,
+      }),
+    );
+  };
 
   const handleQuickAdd = (product: Product) => {
     if (onQuickAdd) {
@@ -134,8 +152,11 @@ export function HomeProducts({
                 key={product.id}
                 product={product}
                 locale={locale}
-                isWishlisted={wishlistIds.includes(product.id)}
-                onToggleWishlist={onToggleWishlist}
+                isWishlisted={
+                  wishlistIds.includes(product.id) ||
+                  wishlistIdsFromStore.includes(product.id)
+                }
+                onToggleWishlist={handleToggleWishlist}
                 onQuickAdd={handleQuickAdd}
               />
             ))}

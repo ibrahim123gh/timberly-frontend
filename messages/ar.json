@@ -82,7 +82,6 @@
     "subtotal": "المجموع الفرعي",
     "delivery": "التوصيل",
     "free": "مجاني",
-    "calculatedAtCheckout": "يُحتسب عند الدفع",
     "taxNote": "تُحتسب الضرائب عند الدفع.",
     "promoCode": "رمز الخصم",
     "promoCodePlaceholder": "أدخل الرمز",
@@ -92,6 +91,103 @@
     "freeDeliveryProgress": "أضف {amount} للحصول على توصيل مجاني بخدمة كاملة",
     "grandTotal": "الإجمالي",
     "checkout": "المتابعة إلى الدفع"
+  },
+  "wishlist": {
+    "savedCount": "{count, plural, one {عنصر محفوظ واحد} other {# عناصر محفوظة}}",
+    "description": "القطع التي حفظتها لوقت لاحق. أضفها إلى سلتك عندما تكون جاهزاً.",
+    "clearAll": "إزالة الكل",
+    "addAllToCart": "أضف الكل إلى السلة",
+    "addedAllToCart": "{count, plural, one {تمت إضافة عنصر واحد إلى سلتك} other {تمت إضافة # عناصر إلى سلتك}}",
+    "clearedAll": "تم إفراغ قائمة المفضلة",
+    "filters": {
+      "all": "الكل",
+      "inStock": "متوفر",
+      "madeToOrder": "يُصنع عند الطلب"
+    },
+    "estimatedTotal": "التقدير الإجمالي",
+    "viewDetails": "عرض تفاصيل المنتج",
+    "perks": {
+      "delivery": {
+        "title": "توصيل بخدمة كاملة",
+        "description": "توصيل احترافي وتركيب، مجاناً مع كل طلب."
+      },
+      "trial": {
+        "title": "تجربة منزلية لمدة 30 يوماً",
+        "description": "جربها في منزلك — استرداد كامل إذا لم تناسبك."
+      },
+      "warranty": {
+        "title": "ضمان لمدة 10 سنوات",
+        "description": "كل هيكل ووصلة مضمونة لعشر سنوات."
+      }
+    }
+  },
+  "checkout": {
+    "steps": {
+      "contact": "التواصل",
+      "delivery": "التوصيل",
+      "payment": "الدفع"
+    },
+    "topBar": {
+      "secure": "دفع آمن",
+      "guarantee": "ضمان الجودة"
+    },
+    "contact": {
+      "title": "بيانات التواصل",
+      "fullName": "الاسم الكامل",
+      "email": "البريد الإلكتروني",
+      "phone": "رقم الهاتف"
+    },
+    "delivery": {
+      "title": "عنوان التوصيل",
+      "includesNote": "يشمل التركيب بخدمة كاملة",
+      "country": "الدولة",
+      "countryPlaceholder": "اختر دولة",
+      "city": "المدينة",
+      "area": "المنطقة / الحي",
+      "street": "عنوان الشارع",
+      "apartment": "الشقة / الوحدة",
+      "optional": "اختياري",
+      "notes": "ملاحظات التوصيل",
+      "notesPlaceholder": "مثال: رمز البوابة، تعليمات الوقوف، الوصول إلى الطابق..."
+    },
+    "payment": {
+      "title": "الدفع",
+      "card": "بطاقة ائتمان أو خصم",
+      "cash": "الدفع عند الاستلام",
+      "cardNumber": "رقم البطاقة",
+      "cardName": "الاسم على البطاقة",
+      "cardExpiry": "تاريخ الانتهاء",
+      "cardCvv": "رمز التحقق CVV",
+      "secureNote": "بيانات الدفع مشفّرة ولا تُخزَّن على خوادمنا أبداً."
+    },
+    "summary": {
+      "title": "ملخص الطلب",
+      "placeOrder": "تأكيد الطلب",
+      "placing": "جارٍ تأكيد الطلب...",
+      "note": "يتم فحص كل قطعة من تيمبرلي وتشطيبها يدوياً قبل مغادرة الورشة، ثم تغليفها لتوصيل بخدمة كاملة."
+    },
+    "successToast": "تم تأكيد طلبك! سنرسل لك تأكيداً عبر البريد الإلكتروني قريباً."
+  },
+  "orders": {
+    "lookup": {
+      "label": "رقم الطلب",
+      "placeholder": "مثال: TBY-48213",
+      "submit": "تتبع الطلب"
+    },
+    "notFound": "لم نتمكن من العثور على طلب مطابق لـ \"{orderNumber}\".",
+    "notFoundHint": "يتم تتبع الطلبات فقط على الجهاز والمتصفح المستخدمين لإتمام الطلب.",
+    "recentOrders": "الطلبات الأخيرة على هذا الجهاز",
+    "order": "الطلب",
+    "placedOn": "تم الطلب في {date}",
+    "deliveryAddress": "عنوان التوصيل",
+    "contact": "التواصل",
+    "items": "القطع",
+    "status": {
+      "processing": "قيد المعالجة",
+      "confirmed": "تم التأكيد",
+      "outForDelivery": "في طريقه للتوصيل",
+      "delivered": "تم التوصيل"
+    }
   },
   "footer": {
     "brand": "تيمبرلي",

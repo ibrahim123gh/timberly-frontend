@@ -8,17 +8,15 @@ import {
   Font12WhiteMedium,
 } from "@/components/shared/typography";
 import { useCartCount } from "@/features/cart/store/cart-store";
+import { useWishlistCount } from "@/features/wishlist/store/wishlist-store";
 
 type MainHeaderProps = {
   locale?: "en" | "ar";
-  wishlistCount?: number;
 };
 
-export function MainHeader({
-  locale = "en",
-  wishlistCount = 0,
-}: MainHeaderProps) {
+export function MainHeader({ locale = "en" }: MainHeaderProps) {
   const cartCount = useCartCount();
+  const wishlistCount = useWishlistCount();
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {

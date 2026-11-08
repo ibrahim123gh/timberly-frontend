@@ -82,7 +82,6 @@
     "subtotal": "Subtotal",
     "delivery": "Delivery",
     "free": "Free",
-    "calculatedAtCheckout": "Calculated at checkout",
     "taxNote": "Taxes calculated at checkout.",
     "promoCode": "Promo code",
     "promoCodePlaceholder": "Enter code",
@@ -92,6 +91,103 @@
     "freeDeliveryProgress": "Add {amount} more for free white-glove delivery",
     "grandTotal": "Total",
     "checkout": "Proceed to Checkout"
+  },
+  "wishlist": {
+    "savedCount": "{count, plural, one {# saved item} other {# saved items}}",
+    "description": "Pieces you've saved for later. Add them to your cart whenever you're ready.",
+    "clearAll": "Clear All",
+    "addAllToCart": "Add All to Cart",
+    "addedAllToCart": "{count, plural, one {Added # item to your cart} other {Added # items to your cart}}",
+    "clearedAll": "Your wishlist has been cleared",
+    "filters": {
+      "all": "All",
+      "inStock": "In Stock",
+      "madeToOrder": "Made to Order"
+    },
+    "estimatedTotal": "Estimated Total",
+    "viewDetails": "View Product Details",
+    "perks": {
+      "delivery": {
+        "title": "White-Glove Delivery",
+        "description": "Professional delivery and placement, free on every order."
+      },
+      "trial": {
+        "title": "30-Day In-Home Trial",
+        "description": "Live with it at home — full refund if it isn't right."
+      },
+      "warranty": {
+        "title": "10-Year Warranty",
+        "description": "Every frame and joint backed for a decade."
+      }
+    }
+  },
+  "checkout": {
+    "steps": {
+      "contact": "Contact",
+      "delivery": "Delivery",
+      "payment": "Payment"
+    },
+    "topBar": {
+      "secure": "Secure Checkout",
+      "guarantee": "Quality Guarantee"
+    },
+    "contact": {
+      "title": "Contact Details",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number"
+    },
+    "delivery": {
+      "title": "Delivery Address",
+      "includesNote": "Includes white-glove placement",
+      "country": "Country",
+      "countryPlaceholder": "Select a country",
+      "city": "City",
+      "area": "Area / District",
+      "street": "Street Address",
+      "apartment": "Apartment / Unit",
+      "optional": "Optional",
+      "notes": "Delivery Notes",
+      "notesPlaceholder": "e.g. Gate code, parking instructions, floor access..."
+    },
+    "payment": {
+      "title": "Payment",
+      "card": "Credit or Debit Card",
+      "cash": "Cash on Delivery",
+      "cardNumber": "Card Number",
+      "cardName": "Name on Card",
+      "cardExpiry": "Expiry Date",
+      "cardCvv": "CVV",
+      "secureNote": "Your payment details are encrypted and never stored on our servers."
+    },
+    "summary": {
+      "title": "Order Summary",
+      "placeOrder": "Place Order",
+      "placing": "Placing Order...",
+      "note": "Every Timberly piece is inspected and hand-finished before it leaves our workshop, then wrapped for white-glove delivery."
+    },
+    "successToast": "Your order has been placed! We'll email you a confirmation shortly."
+  },
+  "orders": {
+    "lookup": {
+      "label": "Order Number",
+      "placeholder": "e.g. TBY-48213",
+      "submit": "Track Order"
+    },
+    "notFound": "We couldn't find an order matching \"{orderNumber}\".",
+    "notFoundHint": "Orders are only tracked on the device and browser used to place them.",
+    "recentOrders": "Recent orders on this device",
+    "order": "Order",
+    "placedOn": "Placed on {date}",
+    "deliveryAddress": "Delivery Address",
+    "contact": "Contact",
+    "items": "Items",
+    "status": {
+      "processing": "Processing",
+      "confirmed": "Confirmed",
+      "outForDelivery": "Out for Delivery",
+      "delivered": "Delivered"
+    }
   },
   "footer": {
     "brand": "Timberly",

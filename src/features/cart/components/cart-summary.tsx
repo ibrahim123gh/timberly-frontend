@@ -7,9 +7,8 @@ import { ShieldCheck, Truck, RotateCcw } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { StoreButton } from "@/components/shared/store-button";
+import { FREE_DELIVERY_THRESHOLD, STANDARD_DELIVERY_FEE } from "../constants";
 import type { CartLineItem } from "../types/cart";
-
-const FREE_DELIVERY_THRESHOLD = 2000;
 
 type CartSummaryProps = {
   items: CartLineItem[];
@@ -36,6 +35,8 @@ export function CartSummary({ items, locale }: CartSummaryProps) {
     100,
   );
   const hasFreeDelivery = remainingForFreeDelivery === 0;
+  const deliveryFee = hasFreeDelivery ? 0 : STANDARD_DELIVERY_FEE;
+  const total = subtotal + deliveryFee;
 
   const formatPrice = (value: number) =>
     new Intl.NumberFormat(locale === "ar" ? "ar-LB" : "en-US", {
@@ -94,7 +95,7 @@ export function CartSummary({ items, locale }: CartSummaryProps) {
         <div className="flex items-center justify-between text-sm text-ink-body">
           <span>{t("delivery")}</span>
           <span className="tabular-nums">
-            {hasFreeDelivery ? t("free") : t("calculatedAtCheckout")}
+            {hasFreeDelivery ? t("free") : formatPrice(deliveryFee)}
           </span>
         </div>
 
@@ -127,7 +128,7 @@ export function CartSummary({ items, locale }: CartSummaryProps) {
       <div className="flex items-center justify-between border-t border-outline-warm pt-5">
         <span className="font-heading text-lg text-brand-forest">{t("grandTotal")}</span>
         <span className="text-xl font-semibold tabular-nums text-brand-forest">
-          {formatPrice(subtotal)}
+          {formatPrice(total)}
         </span>
       </div>
 

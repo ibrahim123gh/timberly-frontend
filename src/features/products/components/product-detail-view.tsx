@@ -6,6 +6,7 @@ import { toast } from "sonner";
 
 import { useCartStore } from "@/features/cart/store/cart-store";
 import { getCartItemId } from "@/features/cart/types/cart";
+import { useIsWishlisted, useWishlistStore } from "@/features/wishlist/store/wishlist-store";
 import { ProductGallery } from "./product-gallery";
 import { ProductBuyBox } from "./product-buy-box";
 import { ProductTabs } from "./product-tabs";
@@ -24,7 +25,8 @@ export function ProductDetailView({
 }: ProductDetailViewProps) {
   const t = useTranslations("product");
   const addItem = useCartStore((state) => state.addItem);
-  const [isWishlisted, setIsWishlisted] = useState(false);
+  const isWishlisted = useIsWishlisted(product.id);
+  const toggleWishlist = useWishlistStore((state) => state.toggle);
   const [quantity, setQuantity] = useState(1);
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [selectedMaterial, setSelectedMaterial] = useState(
@@ -33,7 +35,7 @@ export function ProductDetailView({
 
   const handleToggleWishlist = () => {
     const next = !isWishlisted;
-    setIsWishlisted(next);
+    toggleWishlist(product.id);
     toast.success(
       t(next ? "addedToWishlist" : "removedFromWishlist", {
         name: product.name,
